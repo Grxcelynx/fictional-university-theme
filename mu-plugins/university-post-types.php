@@ -37,6 +37,24 @@ function university_post_types() {
             'singular_name' => "Program"
         )
     ));
+
+        // Professor Post Type
+    register_post_type('professor', array(
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'public' => true, 
+        'menu_icon' => 'dashicons-businessperson',
+        'labels' => array(
+            'name' => 'Professors',
+            'add_new' => 'Add New Professor',
+            'edit_item' => 'Edit Professor',
+            'all_items' => 'All Profesors',
+            'singular_name' => "Professor"
+        )
+    ));
+
+
+    
 }
 
 add_action('init', 'university_post_types');
